@@ -13,18 +13,36 @@
 <br>
 <div class="container">
 
-
-
     <table class="table table-bordered">
-        <tr>
-            <td>prvni sloupec</td>
-            <td>druhy sloupec</td>
+    
+<?php
+$radek = 1;
+$soucet = 1;
+$maximum = 5;
+$trida = 'class="alert-info"';
+
+while ($radek <= $maximum){
+    if (($radek == 2) || ($radek == 4)){
+    echo"
+        <tr $trida>
+            <td>$radek</td>
+            <td>$soucet</td>
         </tr>
+";
+}
+    else{
+        echo"
+        <tr>
+            <td>$radek</td>
+            <td>$soucet</td>
+        </tr>
+";
+    }
+$radek = $radek + 1;
+$soucet = $soucet + $radek;
+}
+?>
     </table>
-
-
-
-
 </div>
 </body>
 </html>
